@@ -1026,11 +1026,11 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     return UIInterfaceOrientationMaskAll;
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
-    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation:toInterfaceOrientation];
+    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation];
 }
 
 #pragma mark - Helpers: Capture Session
