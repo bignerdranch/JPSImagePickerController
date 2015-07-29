@@ -10,6 +10,8 @@
 
 @implementation JPSAVCaptureVideoPreviewLayerHostingView
 
+@dynamic layer;
+
 + (Class)layerClass
 {
     return [AVCaptureVideoPreviewLayer class];
