@@ -14,7 +14,7 @@
 #import "JPSAVCaptureVideoPreviewLayerHostingView.h"
 #import "BNRStateForwardingControl.h"
 
-static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientation(UIInterfaceOrientation deviceOrientation);
+static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientation(UIDeviceOrientation deviceOrientation);
 
 static CGFloat JPSImagePickerControllerButtonInset = 15.5;
 
@@ -95,12 +95,13 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
 {
     [super viewWillAppear:animated];
     [self setupSession];
+    [self setupRotationObservation];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self teardownVolumeButtonHandler];
+    [self setupVolumeButtonHandler];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -114,6 +115,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
 {
     [super viewDidDisappear:animated];
     
+    [self teardownRotationObservation];
     [self teardownSession];
 }
 
@@ -124,7 +126,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     _session = session;
     
     self.capturePreviewView.layer.session = session;
-    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation];
+    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation];
 }
 
 - (void)setPreviewImage:(UIImage *)previewImage
@@ -983,12 +985,13 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     self.cancelOverlayControl.hidden = !visible;
 }
 
-- (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation
+- (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation
 {
-    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation:self.interfaceOrientation];
+    UIDevice *device = [UIDevice currentDevice];
+    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:device.orientation];
 }
 
-- (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation:(UIInterfaceOrientation)orientation
+- (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:(UIDeviceOrientation)orientation
 {
     self.capturePreviewView.layer.connection.videoOrientation = AVCaptureVideoOrientationFromUIDeviceOrientation(orientation);
 }
@@ -1026,11 +1029,35 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     return UIInterfaceOrientationMaskAll;
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+#pragma mark - Helpers: Rotation
+
+- (void)setupRotationObservation
 {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    UIDevice *device = [UIDevice currentDevice];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     
-    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromInterfaceOrientation];
+    [notificationCenter addObserver:self
+                           selector:@selector(receiveDeviceOrientationDidChangeNotification:)
+                               name:UIDeviceOrientationDidChangeNotification
+                             object:device];
+    [device beginGeneratingDeviceOrientationNotifications];
+}
+
+- (void)receiveDeviceOrientationDidChangeNotification:(NSNotification *)note
+{
+    UIDevice *device = note.object;
+    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:device.orientation];
+}
+
+- (void)teardownRotationObservation
+{
+    UIDevice *device = [UIDevice currentDevice];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    
+    [device endGeneratingDeviceOrientationNotifications];
+    [notificationCenter removeObserver:self
+                                  name:UIDeviceOrientationDidChangeNotification
+                                object:device];
 }
 
 #pragma mark - Helpers: Capture Session
@@ -1284,7 +1311,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
 
 @end
 
-static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientation(UIInterfaceOrientation deviceOrientation)
+static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientation(UIDeviceOrientation deviceOrientation)
 {
     static NSDictionary *dictionary = nil;
     
@@ -1298,10 +1325,10 @@ static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientatio
         mutableDictionary[@(deviceOrientation)] = @(videoOrientation); \
     } while(0)
         
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortrait , UIInterfaceOrientationPortrait );
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortraitUpsideDown , UIInterfaceOrientationPortraitUpsideDown );
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeRight , UIInterfaceOrientationLandscapeRight );
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeLeft , UIInterfaceOrientationLandscapeLeft );
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortrait , UIDeviceOrientationPortrait );
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortraitUpsideDown , UIDeviceOrientationPortraitUpsideDown );
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeRight , UIDeviceOrientationLandscapeRight );
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeLeft , UIDeviceOrientationLandscapeLeft );
         
 #undef SetVideoOrientationForDeviceOrientation
         
