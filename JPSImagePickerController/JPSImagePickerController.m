@@ -985,10 +985,14 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     self.cancelOverlayControl.hidden = !visible;
 }
 
+- (UIDeviceOrientation)deviceOrientation {
+    UIDevice *device = [UIDevice currentDevice];
+    return device.orientation;
+}
+
 - (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation
 {
-    UIDevice *device = [UIDevice currentDevice];
-    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:device.orientation];
+    [self updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:self.deviceOrientation];
 }
 
 - (void)updateCapturePreviewViewLayerConnectionVideoOrientationFromDeviceOrientation:(UIDeviceOrientation)orientation
