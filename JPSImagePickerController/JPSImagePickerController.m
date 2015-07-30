@@ -1327,8 +1327,11 @@ static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientatio
         
         SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortrait , UIDeviceOrientationPortrait );
         SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationPortraitUpsideDown , UIDeviceOrientationPortraitUpsideDown );
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeRight , UIDeviceOrientationLandscapeRight );
-        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeLeft , UIDeviceOrientationLandscapeLeft );
+        // These orientations appear not to match.
+        // However, if we use matching orientations, we do not get the correct result:
+        // in landscape, video will be upside down.
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeRight , UIDeviceOrientationLandscapeLeft );
+        SetVideoOrientationForDeviceOrientation( AVCaptureVideoOrientationLandscapeLeft , UIDeviceOrientationLandscapeRight );
         
 #undef SetVideoOrientationForDeviceOrientation
         
