@@ -17,14 +17,4 @@
     return [AVCaptureVideoPreviewLayer class];
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-}
-
 @end
