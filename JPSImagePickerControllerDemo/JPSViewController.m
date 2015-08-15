@@ -8,7 +8,7 @@
 
 #import "JPSViewController.h"
 #import "JPSImagePickerController.h"
-#import "NSLayoutConstraint+BNRMatchingSuperviewAdditions.h"
+#import "NSLayoutConstraint+JPSMatchingSuperviewAdditions.h"
 
 @interface JPSViewController ()
     <JPSImagePickerDelegate,
@@ -97,7 +97,7 @@
     self.imageView = imageView;
     
     // Constraints
-    NSArray *constraints = [NSLayoutConstraint bnr_constraintsForView:imageView toMatchFrameOfView:view];
+    NSArray *constraints = [NSLayoutConstraint jps_constraintsForView:imageView toMatchFrameOfView:view];
     [view addConstraints:constraints];
 }
 

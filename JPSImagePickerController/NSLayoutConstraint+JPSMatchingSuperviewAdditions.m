@@ -1,16 +1,16 @@
 //
-//  NSLayoutConstraint+BNRMatchingSuperviewAdditions.m
+//  NSLayoutConstraint+JPSMatchingSuperviewAdditions.m
 //  JPSImagePickerControllerDemo
 //
 //  Created by Nate Chandler on 7/17/14.
 //  Copyright (c) 2014 JP Simard. All rights reserved.
 //
 
-#import "NSLayoutConstraint+BNRMatchingSuperviewAdditions.h"
+#import "NSLayoutConstraint+JPSMatchingSuperviewAdditions.h"
 
-@implementation NSLayoutConstraint (BNRMatchingSuperviewAdditions)
+@implementation NSLayoutConstraint (JPSMatchingSuperviewAdditions)
 
-+ (NSArray/*NSLayoutConstraint*/ *)bnr_constraintsForView:(UIView *)view toMatchFrameOfView:(UIView *)matchedView;
++ (NSArray/*NSLayoutConstraint*/ *)jps_constraintsForView:(UIView *)view toMatchFrameOfView:(UIView *)matchedView;
 {
     NSArray *result = nil;
     

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNRStateForwardingControl : UIControl
+@interface JPSStateForwardingControl : UIControl
 
 @property (nonatomic, readonly) UIControl *targetControl;
 

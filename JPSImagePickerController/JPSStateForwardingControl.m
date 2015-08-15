@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 JP Simard. All rights reserved.
 //
 
-#import "BNRStateForwardingControl.h"
+#import "JPSStateForwardingControl.h"
 
-@interface BNRStateForwardingControl ()
+@interface JPSStateForwardingControl ()
 
 @end
 
-@implementation BNRStateForwardingControl
+@implementation JPSStateForwardingControl
 
 #pragma mark - Lifecycle
 

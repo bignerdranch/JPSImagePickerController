@@ -10,9 +10,9 @@
 #import "JPSCameraButton.h"
 #import <AVFoundation/AVFoundation.h>
 #import "JPSVolumeButtonHandler.h"
-#import "NSLayoutConstraint+BNRMatchingSuperviewAdditions.h"
+#import "NSLayoutConstraint+JPSMatchingSuperviewAdditions.h"
 #import "JPSAVCaptureVideoPreviewLayerHostingView.h"
-#import "BNRStateForwardingControl.h"
+#import "JPSStateForwardingControl.h"
 
 static AVCaptureVideoOrientation AVCaptureVideoOrientationFromUIDeviceOrientation(UIDeviceOrientation deviceOrientation);
 
@@ -464,7 +464,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     UIButton *cancelButton = self.cancelButton;
     
     // View
-    UIControl *cancelOverlayControl = [[BNRStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+    UIControl *cancelOverlayControl = [[JPSStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
                                                                       forwardingTarget:cancelButton];
     [cancelOverlayControl addTarget:self action:@selector(didPressCancelButton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -543,7 +543,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     UIButton *flashButton = self.flashButton;
     
     // View
-    UIControl *flashOverlayControl = [[BNRStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+    UIControl *flashOverlayControl = [[JPSStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
                                                                      forwardingTarget:flashButton];
     [flashOverlayControl addTarget:self action:@selector(didPressFlashButton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -618,7 +618,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     UIButton *cameraSwitchButton = self.cameraSwitchButton;
     
     // View
-    UIControl *cameraSwitchOverlayControl = [[BNRStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+    UIControl *cameraSwitchOverlayControl = [[JPSStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
                                                                             forwardingTarget:cameraSwitchButton];
     [cameraSwitchOverlayControl addTarget:self action:@selector(didPressCameraSwitchButton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -671,7 +671,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
 
     // Constraints
     previewImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSArray *constraints = [NSLayoutConstraint bnr_constraintsForView:previewImageView toMatchFrameOfView:view];
+    NSArray *constraints = [NSLayoutConstraint jps_constraintsForView:previewImageView toMatchFrameOfView:view];
     [view addConstraints:constraints];
 }
 
@@ -688,7 +688,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     
     // Constraints
     capturePreviewView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSArray *constraints = [NSLayoutConstraint bnr_constraintsForView:capturePreviewView toMatchFrameOfView:view];
+    NSArray *constraints = [NSLayoutConstraint jps_constraintsForView:capturePreviewView toMatchFrameOfView:view];
     [view addConstraints:constraints];
 }
 
@@ -732,7 +732,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     UIButton *retakeButton = self.retakeButton;
     
     // View
-    UIControl *retakeOverlayControl = [[BNRStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+    UIControl *retakeOverlayControl = [[JPSStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
                                                                       forwardingTarget:retakeButton];
     [retakeOverlayControl addTarget:self action:@selector(retake:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -811,7 +811,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     UIButton *useButton = self.useButton;
     
     // View
-    UIControl *useOverlayControl = [[BNRStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
+    UIControl *useOverlayControl = [[JPSStateForwardingControl alloc] initWithFrame:CGRectMake(0, 0, 100, 100)
                                                                   forwardingTarget:useButton];
     [useOverlayControl addTarget:self action:@selector(didPressUseButton:) forControlEvents:UIControlEventTouchUpInside];
     
