@@ -511,7 +511,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     // View
     UIButton *flashButton = [UIButton buttonWithType:UIButtonTypeSystem];
     flashButton.translatesAutoresizingMaskIntoConstraints = NO;
-    UIImage *flashButtonImage = [[UIImage imageNamed:@"JPSImagePickerController.bundle/flash_button"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *flashButtonImage = [[UIImage imageNamed:@"JPSImagePickerControllerAssets.bundle/flash_button"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [flashButton setImage:flashButtonImage forState:UIControlStateNormal];
     [flashButton setTitle:@" On" forState:UIControlStateNormal];
     
@@ -589,7 +589,7 @@ typedef NS_ENUM(NSInteger, JPSImagePickerControllerState) {
     // View
     UIButton *cameraSwitchButton = [UIButton buttonWithType:UIButtonTypeSystem];
     cameraSwitchButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [cameraSwitchButton setBackgroundImage:[UIImage imageNamed:@"JPSImagePickerController.bundle/camera_switch_button"] forState:UIControlStateNormal];
+    [cameraSwitchButton setBackgroundImage:[UIImage imageNamed:@"JPSImagePickerControllerAssets.bundle/camera_switch_button"] forState:UIControlStateNormal];
     
     [capturingToolbarView addSubview:cameraSwitchButton];
     self.cameraSwitchButton = cameraSwitchButton;

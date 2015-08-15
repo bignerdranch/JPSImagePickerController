@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		433539081B7EFA0700EB9618 /* libJPSImagePickerController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 433538FC1B7EFA0700EB9618 /* libJPSImagePickerController.a */; };
+		433539251B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 433539181B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.m */; };
+		433539261B7EFB1F00EB9618 /* JPSCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335391A1B7EFB1F00EB9618 /* JPSCameraButton.m */; };
+		433539271B7EFB1F00EB9618 /* JPSImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335391C1B7EFB1F00EB9618 /* JPSImagePickerController.m */; };
+		433539281B7EFB1F00EB9618 /* JPSStateForwardingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335391E1B7EFB1F00EB9618 /* JPSStateForwardingControl.m */; };
+		433539291B7EFB1F00EB9618 /* JPSVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 433539201B7EFB1F00EB9618 /* JPSVolumeButtonHandler.m */; };
+		4335392A1B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 433539221B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.m */; };
+		4335392B1B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 433539241B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.m */; };
+		433539601B7F7D8700EB9618 /* flash_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4335395E1B7F7D8700EB9618 /* flash_button.png */; };
+		433539611B7F7D8700EB9618 /* flash_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4335395F1B7F7D8700EB9618 /* flash_button@2x.png */; };
+		433539641B7F7D9100EB9618 /* camera_switch_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 433539621B7F7D9100EB9618 /* camera_switch_button.png */; };
+		433539651B7F7D9100EB9618 /* camera_switch_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 433539631B7F7D9100EB9618 /* camera_switch_button@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		433539091B7EFA0700EB9618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433538F41B7EFA0700EB9618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 433538FB1B7EFA0700EB9618;
+			remoteInfo = JPSImagePickerController;
+		};
+		433539501B7F780F00EB9618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433538F41B7EFA0700EB9618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 433539481B7F77F900EB9618;
+			remoteInfo = JPSImagePickerControllerAssets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		433538FA1B7EFA0700EB9618 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		433538FC1B7EFA0700EB9618 /* libJPSImagePickerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJPSImagePickerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		433539071B7EFA0700EB9618 /* JPSImagePickerControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPSImagePickerControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4335390D1B7EFA0700EB9618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		433539161B7EFAFB00EB9618 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		433539171B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSAVCaptureVideoPreviewLayerHostingView.h; sourceTree = "<group>"; };
+		433539181B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSAVCaptureVideoPreviewLayerHostingView.m; sourceTree = "<group>"; };
+		433539191B7EFB1F00EB9618 /* JPSCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSCameraButton.h; sourceTree = "<group>"; };
+		4335391A1B7EFB1F00EB9618 /* JPSCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSCameraButton.m; sourceTree = "<group>"; };
+		4335391B1B7EFB1F00EB9618 /* JPSImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSImagePickerController.h; sourceTree = "<group>"; };
+		4335391C1B7EFB1F00EB9618 /* JPSImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSImagePickerController.m; sourceTree = "<group>"; };
+		4335391D1B7EFB1F00EB9618 /* JPSStateForwardingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSStateForwardingControl.h; sourceTree = "<group>"; };
+		4335391E1B7EFB1F00EB9618 /* JPSStateForwardingControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSStateForwardingControl.m; sourceTree = "<group>"; };
+		4335391F1B7EFB1F00EB9618 /* JPSVolumeButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSVolumeButtonHandler.h; sourceTree = "<group>"; };
+		433539201B7EFB1F00EB9618 /* JPSVolumeButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSVolumeButtonHandler.m; sourceTree = "<group>"; };
+		433539211B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+JPSMatchingSuperviewAdditions.h"; sourceTree = "<group>"; };
+		433539221B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+JPSMatchingSuperviewAdditions.m"; sourceTree = "<group>"; };
+		433539231B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPSDrawBlock.h"; sourceTree = "<group>"; };
+		433539241B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPSDrawBlock.m"; sourceTree = "<group>"; };
+		433539491B7F77F900EB9618 /* JPSImagePickerControllerAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPSImagePickerControllerAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4335395E1B7F7D8700EB9618 /* flash_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flash_button.png; path = Media.xcassets/flash_button.imageset/flash_button.png; sourceTree = "<group>"; };
+		4335395F1B7F7D8700EB9618 /* flash_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flash_button@2x.png"; path = "Media.xcassets/flash_button.imageset/flash_button@2x.png"; sourceTree = "<group>"; };
+		433539621B7F7D9100EB9618 /* camera_switch_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_switch_button.png; path = Media.xcassets/camera_switch_button.imageset/camera_switch_button.png; sourceTree = "<group>"; };
+		433539631B7F7D9100EB9618 /* camera_switch_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_switch_button@2x.png"; path = "Media.xcassets/camera_switch_button.imageset/camera_switch_button@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		433538F91B7EFA0700EB9618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433539041B7EFA0700EB9618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433539081B7EFA0700EB9618 /* libJPSImagePickerController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433539461B7F77F900EB9618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433538F31B7EFA0700EB9618 = {
+			isa = PBXGroup;
+			children = (
+				4335395D1B7F7D7800EB9618 /* Assets */,
+				433539161B7EFAFB00EB9618 /* Media.xcassets */,
+				433538FE1B7EFA0700EB9618 /* JPSImagePickerController */,
+				4335390B1B7EFA0700EB9618 /* JPSImagePickerControllerTests */,
+				4335394A1B7F77F900EB9618 /* JPSImagePickerControllerAssets */,
+				433538FD1B7EFA0700EB9618 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		433538FD1B7EFA0700EB9618 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				433538FC1B7EFA0700EB9618 /* libJPSImagePickerController.a */,
+				433539071B7EFA0700EB9618 /* JPSImagePickerControllerTests.xctest */,
+				433539491B7F77F900EB9618 /* JPSImagePickerControllerAssets.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433538FE1B7EFA0700EB9618 /* JPSImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				433539171B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.h */,
+				433539181B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.m */,
+				433539191B7EFB1F00EB9618 /* JPSCameraButton.h */,
+				4335391A1B7EFB1F00EB9618 /* JPSCameraButton.m */,
+				4335391B1B7EFB1F00EB9618 /* JPSImagePickerController.h */,
+				4335391C1B7EFB1F00EB9618 /* JPSImagePickerController.m */,
+				4335391D1B7EFB1F00EB9618 /* JPSStateForwardingControl.h */,
+				4335391E1B7EFB1F00EB9618 /* JPSStateForwardingControl.m */,
+				4335391F1B7EFB1F00EB9618 /* JPSVolumeButtonHandler.h */,
+				433539201B7EFB1F00EB9618 /* JPSVolumeButtonHandler.m */,
+				433539211B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.h */,
+				433539221B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.m */,
+				433539231B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.h */,
+				433539241B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.m */,
+			);
+			path = JPSImagePickerController;
+			sourceTree = "<group>";
+		};
+		4335390B1B7EFA0700EB9618 /* JPSImagePickerControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4335390C1B7EFA0700EB9618 /* Supporting Files */,
+			);
+			path = JPSImagePickerControllerTests;
+			sourceTree = "<group>";
+		};
+		4335390C1B7EFA0700EB9618 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4335390D1B7EFA0700EB9618 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4335394A1B7F77F900EB9618 /* JPSImagePickerControllerAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JPSImagePickerControllerAssets;
+			sourceTree = "<group>";
+		};
+		4335395D1B7F7D7800EB9618 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4335395E1B7F7D8700EB9618 /* flash_button.png */,
+				4335395F1B7F7D8700EB9618 /* flash_button@2x.png */,
+				433539621B7F7D9100EB9618 /* camera_switch_button.png */,
+				433539631B7F7D9100EB9618 /* camera_switch_button@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		433538FB1B7EFA0700EB9618 /* JPSImagePickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433539101B7EFA0700EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerController" */;
+			buildPhases = (
+				433538F81B7EFA0700EB9618 /* Sources */,
+				433538F91B7EFA0700EB9618 /* Frameworks */,
+				433538FA1B7EFA0700EB9618 /* CopyFiles */,
+				433539371B7F004600EB9618 /* ShellScript */,
+				433539531B7F789E00EB9618 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				433539511B7F780F00EB9618 /* PBXTargetDependency */,
+			);
+			name = JPSImagePickerController;
+			productName = JPSImagePickerController;
+			productReference = 433538FC1B7EFA0700EB9618 /* libJPSImagePickerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		433539061B7EFA0700EB9618 /* JPSImagePickerControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433539131B7EFA0700EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerControllerTests" */;
+			buildPhases = (
+				433539031B7EFA0700EB9618 /* Sources */,
+				433539041B7EFA0700EB9618 /* Frameworks */,
+				433539051B7EFA0700EB9618 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4335390A1B7EFA0700EB9618 /* PBXTargetDependency */,
+			);
+			name = JPSImagePickerControllerTests;
+			productName = JPSImagePickerControllerTests;
+			productReference = 433539071B7EFA0700EB9618 /* JPSImagePickerControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		433539481B7F77F900EB9618 /* JPSImagePickerControllerAssets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4335394D1B7F77F900EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerControllerAssets" */;
+			buildPhases = (
+				433539451B7F77F900EB9618 /* Sources */,
+				433539461B7F77F900EB9618 /* Frameworks */,
+				433539471B7F77F900EB9618 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPSImagePickerControllerAssets;
+			productName = JPSImagePickerControllerAssets;
+			productReference = 433539491B7F77F900EB9618 /* JPSImagePickerControllerAssets.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		433538F41B7EFA0700EB9618 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "JP Simard";
+				TargetAttributes = {
+					433538FB1B7EFA0700EB9618 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					433539061B7EFA0700EB9618 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					433539481B7F77F900EB9618 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 433538F71B7EFA0700EB9618 /* Build configuration list for PBXProject "JPSImagePickerController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 433538F31B7EFA0700EB9618;
+			productRefGroup = 433538FD1B7EFA0700EB9618 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				433538FB1B7EFA0700EB9618 /* JPSImagePickerController */,
+				433539061B7EFA0700EB9618 /* JPSImagePickerControllerTests */,
+				433539481B7F77F900EB9618 /* JPSImagePickerControllerAssets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		433539051B7EFA0700EB9618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433539471B7F77F900EB9618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433539641B7F7D9100EB9618 /* camera_switch_button.png in Resources */,
+				433539611B7F7D8700EB9618 /* flash_button@2x.png in Resources */,
+				433539601B7F7D8700EB9618 /* flash_button.png in Resources */,
+				433539651B7F7D9100EB9618 /* camera_switch_button@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		433539371B7F004600EB9618 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi";
+		};
+		433539531B7F789E00EB9618 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"RunScript2:\"\necho \"Autocopying any bundles into the 'universal' output folder created by RunScript1\"\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"${BUILT_PRODUCTS_DIR}\"\ncp -r \"${BUILT_PRODUCTS_DIR}/\"*.bundle \"${CREATING_UNIVERSAL_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		433538F81B7EFA0700EB9618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433539281B7EFB1F00EB9618 /* JPSStateForwardingControl.m in Sources */,
+				4335392B1B7EFB1F00EB9618 /* UIImage+JPSDrawBlock.m in Sources */,
+				433539271B7EFB1F00EB9618 /* JPSImagePickerController.m in Sources */,
+				433539261B7EFB1F00EB9618 /* JPSCameraButton.m in Sources */,
+				4335392A1B7EFB1F00EB9618 /* NSLayoutConstraint+JPSMatchingSuperviewAdditions.m in Sources */,
+				433539251B7EFB1F00EB9618 /* JPSAVCaptureVideoPreviewLayerHostingView.m in Sources */,
+				433539291B7EFB1F00EB9618 /* JPSVolumeButtonHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433539031B7EFA0700EB9618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433539451B7F77F900EB9618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4335390A1B7EFA0700EB9618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 433538FB1B7EFA0700EB9618 /* JPSImagePickerController */;
+			targetProxy = 433539091B7EFA0700EB9618 /* PBXContainerItemProxy */;
+		};
+		433539511B7F780F00EB9618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 433539481B7F77F900EB9618 /* JPSImagePickerControllerAssets */;
+			targetProxy = 433539501B7F780F00EB9618 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4335390E1B7EFA0700EB9618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4335390F1B7EFA0700EB9618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		433539111B7EFA0700EB9618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		433539121B7EFA0700EB9618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		433539141B7EFA0700EB9618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JPSImagePickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		433539151B7EFA0700EB9618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JPSImagePickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4335394E1B7F77F900EB9618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.3;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4335394F1B7F77F900EB9618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.3;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		433538F71B7EFA0700EB9618 /* Build configuration list for PBXProject "JPSImagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4335390E1B7EFA0700EB9618 /* Debug */,
+				4335390F1B7EFA0700EB9618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433539101B7EFA0700EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433539111B7EFA0700EB9618 /* Debug */,
+				433539121B7EFA0700EB9618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433539131B7EFA0700EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433539141B7EFA0700EB9618 /* Debug */,
+				433539151B7EFA0700EB9618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4335394D1B7F77F900EB9618 /* Build configuration list for PBXNativeTarget "JPSImagePickerControllerAssets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4335394E1B7F77F900EB9618 /* Debug */,
+				4335394F1B7F77F900EB9618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 433538F41B7EFA0700EB9618 /* Project object */;
+}
